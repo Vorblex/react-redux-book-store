@@ -1,28 +1,9 @@
 import React from 'react'
-import WithBookstoreService from 'components/hoc/with-bookstore-service'
 
-const Header = (props) => {
-
-  const data =  props.getData()
-  
+export default () => {
   return (
     <div className="Header">
-      <h1>Main themes</h1>
-      {
-        data.map(el => {
-          return (
-            <div key={el+1}>{el}</div>
-          )
-        })
-      }
+      <h1>Header</h1>
     </div>
   )
 }
-
-const mapMethodsToProps = ({getBooks}) => {
-  return {
-    getData: getBooks
-  }
-}
-
-export default WithBookstoreService(mapMethodsToProps)(Header)

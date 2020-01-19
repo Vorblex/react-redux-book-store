@@ -1,7 +1,18 @@
 export default class BookstoreService {
 
   getBooks = () => {
-    console.log('BookService imported');
-    return ['html', 'css', 'js', 'vue', 'react']
+    return [
+      {
+        id: 1,
+        title: 'Production-Ready Microservices',
+        author: 'Susan J. Fowler'
+      },
+      {
+        id: 2,
+        title: 'Release It!',
+        author: 'Michael T. Nygard'
+      }
+    ]
   }
+
 }

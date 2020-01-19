@@ -1,11 +1,17 @@
 import React from 'react'
-import Header from 'components/header'
 
-function App() {
+import { Route, Switch } from 'react-router-dom'
+import Header from 'components/header'
+import {HomePage, CartPage } from 'components/pages'
+
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <h1>Content well be here</h1>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/cart" component={CartPage}/>
+      </Switch>
     </div>
   )
 }
